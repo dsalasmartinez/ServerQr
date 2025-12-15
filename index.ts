@@ -8,4 +8,8 @@ app.use(express.json());
 
 app.use("/api", router);
 
-app.listen(5024, () => console.log("QR Microservice running on port 5024"));
+const PORT = process.env.PORT || 5024;
+
+app.listen(PORT, () => {
+  console.log(`QR Microservice running on port ${PORT}`);
+});
