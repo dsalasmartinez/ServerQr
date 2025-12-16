@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "dev": "ts-node-dev index.ts",
+    "tsc": "tsc -w",
+    "dev": "ts-node-dev src/index.ts",
     "start": "node dist/index.js"
   },
   "keywords": [],
@@ -15,6 +16,7 @@
   "type": "commonjs",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "qrcode": "^1.5.4",
     "typescript": "^5.9.3"

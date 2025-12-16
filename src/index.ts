@@ -1,10 +1,15 @@
+import dotenv from "dotenv";
 import express from "express";
+dotenv.config();
 import cors from "cors";
 import router from "./routes/route";
+import path from "path";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, "./styles")));
 
 app.use("/api", router);
 
